@@ -22,11 +22,12 @@
 </ul>
 <br></br>
 <hr>
-  <div class="chart">
+  <div class="Chart">
     <canvas height="10vh" width="30vw" id="myChart"></canvas>
   </div>
   <script>
  let myChart = document.getElementById('myChart').getContext('2d');
+  // global options
 
  let massPopChart = new Chart(myChart, {
 
@@ -35,6 +36,7 @@
   labels:['Texas', 'Florida', 'New York', 'California', 'Pennsylvania', 'Illinois', 'Ohio', 'Georgia', 'North Carolina', 'Michigan',],
   datasets:[{
     label: 'Most Most Populous in the usa',
+    
     data:[
     28,995,881,
     21,477,737,
@@ -46,7 +48,13 @@
     10,617,423,
     10,488,084,
     9,986,857,
-    ]
+    ],
+    backgroundColor:['pink'
+  ],
+  borderWidth:1,
+  borderColor:'#777',
+  hoverBorderWidth:3,
+  hoverBorderColor:'#000'
   }]
   },
   options:{}
